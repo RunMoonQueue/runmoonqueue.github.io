@@ -71,8 +71,8 @@ function ImageData2Braille(data) {
 }
 
 function CopyText() {
-    /* Get the text field */
-  var copyText = document.getElementById("output");
+  /* Get the text field */
+  var copyText = $('#output');
 
   /* Select the text field */
   copyText.select();
