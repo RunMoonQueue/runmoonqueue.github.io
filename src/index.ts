@@ -91,3 +91,19 @@ function ImageData2Braille( data: ImageData ): string {
 
 	return String.fromCharCode( 10240 + parseInt( dots.reverse().join( '' ), 2 ) );
 }
+
+
+function CopyText() {
+    /* Get the text field */
+  var copyText = document.getElementById("output") as HTMLInputElement;
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
