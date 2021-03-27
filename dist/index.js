@@ -27,15 +27,17 @@ on(document, 'DOMContentLoaded', function (e) {
         asciiWidth = newValue;
         render();
     });
-    on($('#naver'), 'select', function () {
+    on($('#naver'), 'click', function () {
         let width = $('width');
         width.val(25);
         alert("네이버웹툰 규격으로 변경!")
+        render();
     });
-    on($('#kakao'), 'select', function () {
+    on($('#kakao'), 'click', function () {
         let width = $('width');
         width.val(28);
         alert("카카오톡 규격으로 변경!")
+        render();
     });
 });
 function render() {
