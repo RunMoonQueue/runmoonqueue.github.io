@@ -20,25 +20,24 @@ on(document, 'DOMContentLoaded', function (e) {
         threshold = newValue;
         render();
     });
-    on($('#width'), 'blur', function () {
+    on($('#width'), 'change', function () {
         let newValue = parseInt(this.value);
         if (newValue == asciiWidth)
             return;
         asciiWidth = newValue;
         render();
     });
-    on($('#naver'), 'click', function () {
-        let width = $('width');
-        width.val(25);
-        alert("네이버웹툰 규격으로 변경!")
-        render();
-    });
-    on($('#kakao'), 'click', function () {
-        let width = $('width');
-        width.val(28);
-        alert("카카오톡 규격으로 변경!")
-        render();
-    });
+});
+$('.naver').click(function() {
+    let width = $('width');
+    width.val(25);
+    alert("네이버웹툰 규격으로 변경!")
+});
+$('.kakao').click(function() {
+    let width = $('width');
+    width.val(28);
+    alert("카카오톡 규격으로 변경!")
+    render();
 });
 function render() {
     let input = $('#filepicker');
