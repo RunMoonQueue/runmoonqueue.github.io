@@ -6,7 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Run MoonQueue</title>
-	<link rel="stylesheet" href="styles.css">
+	<!-- Bootstrap core CSS -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -17,16 +34,25 @@
 	<input type="range" id="threshold" min="0" max="255" value="127">
 	<br>
 	<label for="width">가로 길이</label>
-	<input type="number" id="width" value="25" step="5"> characters (>500 gets laggy)
+	<input type="number" id="width" value="25" step="5">
+	<br>
+	<br>
+	<button id="naver" type="button" class="btn btn-sm btn-outline-secondary">네이버 웹툰</button>
+	<button id="kakao" type="button" class="btn btn-sm btn-outline-secondary">카카오톡</button>
 
 	<div id="output" contenteditable="true"></div>
 
 	<script src="dist/index.js" type="module"></script>
 	<br>
 	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<script src="https://ads-partners.coupang.com/g.js"></script>
 	<script>
-		new PartnersCoupang.G({"id":461726,"template":"carousel","trackingCode":"AF3459582","width":"680","height":"140"});
+		new PartnersCoupang.G({ "id": 461726, "template": "carousel", "trackingCode": "AF3459582", "width": "680", "height": "140" });
 	</script>
 </body>
 
