@@ -23,7 +23,7 @@ on(document, 'DOMContentLoaded', function (e) {
     });
     on($('#width'), 'change', function () {
         let newValue = parseInt(this.value);
-        alert("what the fuck!! width")
+        alert("what the fuck!! width111")
         if (newValue == asciiWidth)
             return;
         asciiWidth = newValue;
