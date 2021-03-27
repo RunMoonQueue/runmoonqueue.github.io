@@ -33,7 +33,7 @@ on(document, 'DOMContentLoaded', function (e) {
 
 	on($<HTMLInputElement>('#width'), 'blur', function () {
 		let newValue = parseInt(this.value);
-		alert("what the fuck!! width")
+		alert("what the fuck!! width222")
 		if (newValue == asciiWidth) return;
 		asciiWidth = newValue;
 		render();
