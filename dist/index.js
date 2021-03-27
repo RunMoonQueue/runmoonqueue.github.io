@@ -15,6 +15,7 @@ on(document, 'DOMContentLoaded', function (e) {
     });
     on($('#threshold'), 'change', function () {
         let newValue = parseInt(this.value);
+        alert("what the fuck!! threshold")
         if (newValue == threshold)
             return;
         threshold = newValue;
@@ -22,6 +23,7 @@ on(document, 'DOMContentLoaded', function (e) {
     });
     on($('#width'), 'change', function () {
         let newValue = parseInt(this.value);
+        alert("what the fuck!! width")
         if (newValue == asciiWidth)
             return;
         asciiWidth = newValue;
