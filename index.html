@@ -28,17 +28,19 @@
 
 <body>
 	<label for="filepicker">이미지를 선택하세요!</label>
-	<input type="file" id="filepicker" accept=".png,.jpeg,.jpg">
+	<br>
+	<input type="file" id="filepicker" class="btn btn-sm btn-outline-secondary" accept=".png,.jpeg,.jpg">
 	<br>
 	<label for="threshold">정확도</label>
 	<input type="range" id="threshold" min="0" max="255" value="127">
 	<br>
 	<label for="width">가로 길이</label>
-	<input type="range" id="width" min="0" max="50" value="25">
+	<input type="number" id="width" value="25" step="5">
 	<br>
 	<br>
-	<button id="naver" type="button" class="btn btn-sm btn-outline-secondary">네이버 웹툰</button>
-	<button id="kakao" type="button" class="btn btn-sm btn-outline-secondary">카카오톡</button>
+	
+	<button id="naver"type="button" class="btn btn-sm btn-outline-secondary">네이버 웹툰</button>
+	<button type="button" class="btn btn-sm btn-outline-secondary">카카오톡</button>
 
 	<div id="output" contenteditable="true"></div>
 

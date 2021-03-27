@@ -28,16 +28,20 @@ on(document, 'DOMContentLoaded', function (e) {
         render();
     });
 });
-$('.naver').click(function() {
-    let width = $('width');
-    width.val(25);
-    alert("네이버웹툰 규격으로 변경!")
+$(document).ready(function () {
+    $("button[name='naver']").click(function () {
+        let width = $('width');
+        width.val(25);
+        alert("네이버웹툰 규격으로 변경!")
+    });
 });
-$('.kakao').click(function() {
-    let width = $('width');
-    width.val(28);
-    alert("카카오톡 규격으로 변경!")
-    render();
+$(document).ready(function () {
+    $("button[name='kakao']").click(function () {
+        let width = $('width');
+        width.val(28);
+        alert("카카오톡 규격으로 변경!")
+        render();
+    });
 });
 function render() {
     let input = $('#filepicker');
