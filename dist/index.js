@@ -52,9 +52,10 @@ function render() {
     output.style.display = 'block';
     output.innerHTML = ascii.join('<br>');
     
-    console.log("render()")
-    output.setAttribute('value', output.innerHTML);
-    output.select();
+    var range = document.createRange();
+    range.selectNode(output)
+    window.getSelection().addRange(range);
+    
     var successful = document.execCommand("copy");
     var msg = successful ? 'success' : 'failed';
     console.log(msg);
