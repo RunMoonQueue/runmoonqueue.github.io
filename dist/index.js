@@ -15,7 +15,6 @@ on(document, 'DOMContentLoaded', function (e) {
     });
     on($('#threshold'), 'change', function () {
         let newValue = parseInt(this.value);
-        alert("threshold")
         if (newValue == threshold)
             return;
         threshold = newValue;
@@ -23,7 +22,6 @@ on(document, 'DOMContentLoaded', function (e) {
     });
     on($('#width'), 'change', function () {
         let newValue = parseInt(this.value);
-        alert("width")
         if (newValue == asciiWidth)
             return;
         asciiWidth = newValue;
@@ -57,7 +55,9 @@ function render() {
     // 복사
     var range = document.createRange();
     range.selectNode(output.innerHTML);
-    document.execCommand("copy");
+    var successful = document.execCommand("copy");
+    var msg = successful ? 'success' : 'failed';
+    alert(msg);
 
 }
 function ImageData2Braille(data) {
