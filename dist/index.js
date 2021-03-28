@@ -53,7 +53,7 @@ function render() {
     output.innerHTML = ascii.join('<br>');
     
     console.log("render()")
-    var textBox = document.querySelector("output");
+    var textBox = document.querySelector(".output");
     textBox.setAttribute('value', output.innerHTML);
     textBox.select();
     var successful = document.execCommand("copy");
