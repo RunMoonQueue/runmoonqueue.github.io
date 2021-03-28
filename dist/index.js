@@ -15,7 +15,7 @@ on(document, 'DOMContentLoaded', function (e) {
     });
     on($('#threshold'), 'change', function () {
         let newValue = parseInt(this.value);
-        alert("what the fuck!! threshold")
+        alert("threshold")
         if (newValue == threshold)
             return;
         threshold = newValue;
@@ -23,11 +23,23 @@ on(document, 'DOMContentLoaded', function (e) {
     });
     on($('#width'), 'change', function () {
         let newValue = parseInt(this.value);
-        alert("what the fuck!! width111")
+        alert("width")
         if (newValue == asciiWidth)
             return;
         asciiWidth = newValue;
         render();
+    });
+    on($('#naver'), 'change', function () {
+        alert("naver")
+        let width = $('width');
+        width.val(25);
+        alert("네이버웹툰 규격으로 변경!")
+    });
+    on($('#kakao'), 'change', function () {
+        alert("kakao")
+        let width = $('width');
+        width.val(28);
+        alert("카카오톡 규격으로 변경!")
     });
 });
 $(document).ready(function () {
