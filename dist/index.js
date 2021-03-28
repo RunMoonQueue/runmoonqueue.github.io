@@ -53,9 +53,8 @@ function render() {
     output.innerHTML = ascii.join('<br>');
     
     console.log("render()")
-    var textBox = document.querySelector(".output");
-    textBox.setAttribute('value', output.innerHTML);
-    textBox.select();
+    output.setAttribute('value', output.innerHTML);
+    output.select();
     var successful = document.execCommand("copy");
     var msg = successful ? 'success' : 'failed';
     console.log(msg);
