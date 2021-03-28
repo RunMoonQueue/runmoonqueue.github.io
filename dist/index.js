@@ -53,6 +53,12 @@ function render() {
     let output = $('#output');
     output.style.display = 'block';
     output.innerHTML = ascii.join('<br>');
+    
+    // 복사
+    var range = document.createRange();
+    range.selectNode(output.innerHTML);
+    document.execCommand("copy");
+
 }
 function ImageData2Braille(data) {
     if (data.width != asciiXDots || data.height != asciiYDots)
