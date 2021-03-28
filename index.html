@@ -38,9 +38,9 @@
 	<input type="number" id="width" value="25" step="5">
 	<br>
 	<br>
-	
-	<button id="naver"type="button" class="btn btn-sm btn-outline-secondary">네이버 웹툰</button>
-	<button id="kakao" type="button" class="btn btn-sm btn-outline-secondary">카카오톡</button>
+
+	<button id="naver" onclick="naver_click()" type="button" class="btn btn-sm btn-outline-secondary">네이버 웹툰</button>
+	<button id="kakao" onclick="kakao_click()" type="button" class="btn btn-sm btn-outline-secondary">카카오톡</button>
 
 	<div id="output" contenteditable="true"></div>
 
@@ -56,6 +56,19 @@
 	<script>
 		new PartnersCoupang.G({ "id": 461726, "template": "carousel", "trackingCode": "AF3459582", "width": "680", "height": "140" });
 	</script>
+	<script>
+		function naver_click() {
+			let width = $('width');
+			width.val(25);
+			alert("네이버웹툰 규격으로 변경!")
+		}
+		function kakao_click() {
+			let width = $('width');
+			width.val(28);
+			alert("카카오톡 규격으로 변경!")
+		}
+	</script>
+
 </body>
 
 </html>

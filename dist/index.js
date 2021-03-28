@@ -1,7 +1,7 @@
 import { $, on } from './helpers.js';
 // Braille symbol is 2x4 dots
 const asciiXDots = 2, asciiYDots = 4;
-let threshold = 127, asciiWidth = 100, asciiHeight;
+let threshold = 127, asciiWidth = 25, asciiHeight;
 // Cache image
 let image;
 on(document, 'DOMContentLoaded', function (e) {
@@ -29,34 +29,8 @@ on(document, 'DOMContentLoaded', function (e) {
         asciiWidth = newValue;
         render();
     });
-    on($('#naver'), 'click', function () {
-        alert("naver")
-        let width = $('width');
-        width.val(25);
-        alert("네이버웹툰 규격으로 변경!")
-    });
-    on($('#kakao'), 'click', function () {
-        alert("kakao")
-        let width = $('width');
-        width.val(28);
-        alert("카카오톡 규격으로 변경!")
-    });
 });
-$(document).ready(function () {
-    $("button[name='naver']").click(function () {
-        let width = $('width');
-        width.val(25);
-        alert("네이버웹툰 규격으로 변경!")
-    });
-});
-$(document).ready(function () {
-    $("button[name='kakao']").click(function () {
-        let width = $('width');
-        width.val(28);
-        alert("카카오톡 규격으로 변경!")
-        render();
-    });
-});
+
 function render() {
     let input = $('#filepicker');
     let ascii = [];
