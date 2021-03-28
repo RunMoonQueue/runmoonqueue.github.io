@@ -29,13 +29,13 @@ on(document, 'DOMContentLoaded', function (e) {
         asciiWidth = newValue;
         render();
     });
-    on($('#naver'), 'change', function () {
+    on($('#naver'), 'click', function () {
         alert("naver")
         let width = $('width');
         width.val(25);
         alert("네이버웹툰 규격으로 변경!")
     });
-    on($('#kakao'), 'change', function () {
+    on($('#kakao'), 'click', function () {
         alert("kakao")
         let width = $('width');
         width.val(28);
