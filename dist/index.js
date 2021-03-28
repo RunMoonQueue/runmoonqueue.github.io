@@ -52,12 +52,13 @@ function render() {
     output.style.display = 'block';
     output.innerHTML = ascii.join('<br>');
     
-    var textBox = document.querySelector(".clipboard");
+    console.log("render()")
+    var textBox = document.querySelector("output");
     textBox.setAttribute('value', output.innerHTML);
     textBox.select();
     var successful = document.execCommand("copy");
     var msg = successful ? 'success' : 'failed';
-    alert(msg);
+    console.log(msg);
 
 }
 function ImageData2Braille(data) {
