@@ -58,14 +58,14 @@
 	</script>
 	<script>
 		function naver_click() {
-			let width = $('width');
+			let width = document.querySelector('width');
 			width.val(25);
-			alert("네이버웹툰 규격으로 변경!")
+			alert("네이버웹툰 규격으로 변경! width: " + width.val)
 		}
 		function kakao_click() {
-			let width = $('width');
+			let width = document.querySelector('width');
 			width.val(28);
-			alert("카카오톡 규격으로 변경!")
+			alert("카카오톡 규격으로 변경! width: " + width.val)
 		}
 	</script>
 
