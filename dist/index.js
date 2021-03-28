@@ -52,9 +52,9 @@ function render() {
     output.style.display = 'block';
     output.innerHTML = ascii.join('<br>');
     
-    // 복사
-    var range = document.createRange();
-    range.selectNode(output.innerHTML);
+    var textBox = document.querySelector(".clipboard");
+    textBox.setAttribute('value', output.innerHTML);
+    textBox.select();
     var successful = document.execCommand("copy");
     var msg = successful ? 'success' : 'failed';
     alert(msg);
